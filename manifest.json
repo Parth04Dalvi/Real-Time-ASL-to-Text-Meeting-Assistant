@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ASL Real-Time Meeting Assistant",
+  "version": "1.0",
+  "description": "Translates ASL to text overlays during video calls using TensorFlow.js.",
+  "permissions": ["videoCapture", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*", "https://zoom.us/*"],
+      "js": ["contentScript.bundle.js"],
+      "css": ["overlay.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["model/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
