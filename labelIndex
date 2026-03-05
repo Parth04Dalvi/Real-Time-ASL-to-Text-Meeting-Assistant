@@ -1,0 +1,12 @@
+// constants/aslLabels.js
+export const ASL_MAP = {
+  0: "A",
+  1: "B",
+  2: "C",
+  3: "D",
+  4: "E",
+  // Add remaining alphabet...
+  25: "Z",
+  26: "Space",
+  27: "Backspace"
+};
